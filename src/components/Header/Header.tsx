@@ -15,7 +15,7 @@ const getQueryFromSessionStorage = (): string => {
   }
 };
 
-// Hàm lưu query vào sessionStorage
+
 const saveQueryToSessionStorage = (query: string): void => {
   try {
     sessionStorage.setItem("query", query);
@@ -25,19 +25,19 @@ const saveQueryToSessionStorage = (query: string): void => {
 };
 
 const Header = ({ onQueryChange }: { onQueryChange: (query: string) => void }) => {
-  const [q, setQ] = useState<string>("realism"); // Trạng thái query hiện tại
-  const [current, setCurrent] = useState("realism"); // Key của menu đang được chọn
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false); // Trạng thái Drawer
-  const [isMobile, setIsMobile] = useState(false); // Kiểm tra chế độ mobile
+  const [q, setQ] = useState<string>("realism"); 
+  const [current, setCurrent] = useState("realism"); 
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false); 
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Lấy query từ sessionStorage khi component được mount
+
   useEffect(() => {
     const savedQuery = getQueryFromSessionStorage();
     setQ(savedQuery);
     onQueryChange(savedQuery);
   }, [onQueryChange]);
 
-  // Hàm xử lý thay đổi query
+
   const handleChangeQuery = useCallback(
     (newQuery: string) => {
       setQ(newQuery);
@@ -47,7 +47,7 @@ const Header = ({ onQueryChange }: { onQueryChange: (query: string) => void }) =
     [onQueryChange]
   );
 
-  // Cấu hình các mục menu
+
   const menuItems: MenuProps["items"] = [
     {
       key: "1",
