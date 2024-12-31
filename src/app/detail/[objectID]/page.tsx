@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
 import useArtDetail from "./logic/useArtDetail";
+import Loading from "@/components/Loading/Loading";
 
 
 const ArtDetailPage = () => {
@@ -12,7 +13,7 @@ const ArtDetailPage = () => {
 
   const { details, isLoading, error } = useArtDetail({ objectID: param?.objectID});
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loading />;
   if (error) return <p>Error: </p>;
 
   
