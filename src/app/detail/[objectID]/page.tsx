@@ -33,7 +33,7 @@ const ArtDetailPage = () => {
       ) : (
         <p>No image available</p>
       )}
-      <div className="flex justify-start gap-2 mt-4">
+      <div className="flex flex-wrap justify-center md:justify-start gap-2 md:mt-4">
         {details?.additionalImages?.map((image, index) => (
           <Image
             key={index}
