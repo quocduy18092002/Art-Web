@@ -5,7 +5,6 @@ import Link from "next/link";
 import { MenuOutlined } from "@ant-design/icons";
 import styles from "./styles.module.scss";
 
-// Hàm lấy query từ sessionStorage
 const getQueryFromSessionStorage = (): string => {
   try {
     return sessionStorage.getItem("query") || "realism";

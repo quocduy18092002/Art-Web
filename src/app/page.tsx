@@ -5,6 +5,7 @@ import Collection from "@/components/Collection/Collection";
 import Header from "@/components/Header/Header";
 import HomePage from "@/components/HomePage/HomePage";
 import TopHeader from "@/components/TopHeader/TopHeader";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -23,6 +24,7 @@ export default function Home() {
           <Collection artistIds={artistIds} />
         </>
       )}
+      <Footer />
     </>
   );
 }

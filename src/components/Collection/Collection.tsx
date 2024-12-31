@@ -49,7 +49,6 @@ const Collection = ({ artistIds }: { artistIds: string[] }) => {
   }
 };
 
-
     loadArtworkDetails();
   }, [artistIds, currentPage]);
 
